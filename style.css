@@ -11,8 +11,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 550px;
+  width: 90%; /* Utilizamos porcentaje para que sea adaptable */
+  max-width: 400px; /* Ancho máximo del formulario */
+  height: auto; /* Altura automática según el contenido */
   padding: 25px;
   background-color: #161616;
   box-shadow: 0px 15px 60px rgba(40, 40, 143);
@@ -32,25 +33,32 @@ body {
 #my-form-line-1 {
   color: #60e4ee;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 #registration-form-line-2 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-top: 17px;
+  color: #cbecee;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
+/* Área de entrada de texto */
 #input-area {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
+/* Estilos para los campos de entrada */
 .form-group {
   padding: 11px 25px;
   background: transparent;
   border: 1px solid #e3e3e3;
   line-height: 1;
   border-radius: 8px;
+  margin-bottom: 20px;
   }
 
   .form-group:focus {
@@ -79,6 +87,7 @@ body {
     outline: none;
   }
 
+
   #submit-button-cvr {
     margin-top: 20px;
   }
@@ -91,7 +100,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     margin: 0;
-    padding: 14px 13px 12px 13px;
+    padding: 12px;
     border: 0;
     outline: 1px solid #60e4ee;
     border-radius: 8px;
@@ -156,7 +165,21 @@ body {
     margin-top: 5px; /* Espacio superior para separar los mensajes de error */
     border-radius: 5px; /* Bordes redondeados para hacer que el mensaje de error se vea más suave */
   }
-
   
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+  #formulario {
+    width: 90%;
+    padding: 20px;
+  }
 
-  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+  }
+
+  #submit-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
